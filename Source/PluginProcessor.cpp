@@ -176,8 +176,8 @@ bool BubbleModelAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* BubbleModelAudioProcessor::createEditor()
 {
-    /*return new ImpactModelAudioProcessorEditor(*this);*/
-    return new juce::GenericAudioProcessorEditor(this);
+    return new BubbleModelAudioProcessorEditor(*this);
+    /*return new juce::GenericAudioProcessorEditor(this);*/
 }
 
 //==============================================================================
