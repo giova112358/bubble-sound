@@ -28,7 +28,7 @@ In this project the entire SDT library is ported in C++ and integrated in the JU
 Acoustic emission in water and other liquids are provoked by gas trapped in bubbles. An upcoming bursting bubble in water forms a hollow resonator. The frequency of the dominant
 resonant peak changes with the depth of the pit and the “sharpness” of the resonance is related to its flatness. To model this bubble we ca use a pure sine wave with a frequency-envelope tuned according to the resonance development. An amplitude-envelope creates initial and terminating impulses and accounts for the decaying peak levels. The resulting equation for the pressure wave created by the bubble is
 
-<img src="https://render.githubusercontent.com/render/math?math=x(t)=A\sin(2 \pi f(t)t)e^{t}" width="30%">
+<img src="https://render.githubusercontent.com/render/math?math=x(t)=A\sin(2 \pi f(t)t)e^{t}" width="25%">
 
 Frequency, decay time and relative amplitude of each bubble can be derived from its radius and depth.
 
