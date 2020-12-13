@@ -103,6 +103,8 @@ void BubbleModelAudioProcessor::prepareToPlay (double sampleRate, int samplesPer
     updateVolume();
     updateBubbleParameters();
     reset();
+
+    audioProcessor.prepare({ sampleRate, (juce::uint32)samplesPerBlock, 2 });
     isActive = true;
 }
 
@@ -155,7 +157,7 @@ void BubbleModelAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear(i, 0, buffer.getNumSamples());
 
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    /*for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer(channel);
 
@@ -165,7 +167,8 @@ void BubbleModelAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
         }
 
         mVolume[channel].applyGain(channelData, numSamples);
-    }
+    }*/
+    audioProcessor.renderNextBlock(buffer, 0, buffer.getNumSamples());
 }
 
 //==============================================================================
@@ -238,6 +241,7 @@ void BubbleModelAudioProcessor::updateBubbleParameters()
 
     for (int channel = 0; channel < numChannels; ++channel) {
         model[channel]->bubbleModel->setBubbleParameters(radius->load(), rise->load());
+        audioProcessor.getModel()->setBubbleParameters(radius->load(), rise->load());
     }
 }
 
@@ -249,6 +253,7 @@ void BubbleModelAudioProcessor::bang()
 
     for (int channel = 0; channel < numChannels; ++channel) {
         model[channel]->bubbleModel->bang();
+        audioProcessor.getModel()->bang();
     }
 
 }

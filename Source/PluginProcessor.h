@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "DspProcessor.h"
+#include "Processor.h"
 
 //==============================================================================
 class BubbleModelAudioProcessor  : public juce::AudioProcessor,
@@ -99,6 +100,8 @@ private:
     juce::LinearSmoothedValue<float> mVolume[2]{ 0.0 };
 
     std::unique_ptr<DspProcessor> model[numChannels];
+    Processor audioProcessor;
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(BubbleModelAudioProcessor)
 };

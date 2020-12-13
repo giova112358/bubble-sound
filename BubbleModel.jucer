@@ -58,7 +58,9 @@
       <FILE id="XTluK0" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
       <FILE id="CyyMmp" name="Bubble.cpp" compile="1" resource="0" file="Source/Bubble.cpp"/>
+      <FILE id="fjjYpZ" name="Generator.h" compile="0" resource="0" file="Source/Generator.h"/>
       <FILE id="bxwAjC" name="Bubble.h" compile="0" resource="0" file="Source/Bubble.h"/>
+      <FILE id="qrISLv" name="Processor.h" compile="0" resource="0" file="Source/Processor.h"/>
       <FILE id="gYpi6J" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="gtqLng" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
@@ -84,6 +86,7 @@
         <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </VS2019>
   </EXPORTFORMATS>
@@ -97,6 +100,7 @@
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
